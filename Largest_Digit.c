@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int number,rem,largest=0;
-    scanf("%d",&number);
-    while(number>0)
+    int num,rem,sum=0;
+    scanf("%d",&num);
+    while(num>0)
     {
-        rem=number%10;
-        if(largest<rem)
+        rem = num%10;
+        if(sum<rem)
         {
-            largest=rem;
+            sum = rem;
         }
-        number=number/10;
+        num=num/10;
     }
-    printf("%d",largest);
-    return 0;
+    printf("%d",sum);
 }
