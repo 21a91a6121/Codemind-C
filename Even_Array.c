@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int arr[100],n,i,c=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]%2==0)
+        {
+           c++; 
+        }
+        if(arr[i]==0)
+        {
+            c=c+1;
+        }
+    }
+    if(c==n)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
