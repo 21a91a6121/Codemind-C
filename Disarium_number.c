@@ -1,24 +1,30 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int num,sum=0,temp,i,j=0,tempo;
-    scanf("%d",&num);
-    temp=num;
-    tempo=num;
-    while(num!=0)
+    int n,r,sum=0,a,c=1,p=1,i;
+    scanf("%d",&n);
+    a=n;
+    while(a!=0)
     {
-        num=num/10;
-        j++;
+        r=a%10;
+        sum=(sum*10)+r;
+        a=a/10;
     }
-    while(temp!=0)
+    a=sum;
+    sum=0;
+    while(a!=0)
     {
-        i=temp%10;
-        sum=pow(i,j)+sum;
-        temp=temp/10;
-        j--;
+        r=a%10;
+        for(i=1;i<=c;i++)
+        {
+            p=p*r;
+        }
+        sum=sum+p;
+        a=a/10;
+        c++;
+        p=1;
     }
-    if(tempo==sum)
+    if(sum==n)
     {
         printf("True");
     }
@@ -26,5 +32,5 @@ int main()
     {
         printf("False");
     }
-    return 0;
+    
 }
