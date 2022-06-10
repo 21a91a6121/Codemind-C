@@ -1,22 +1,22 @@
-#include<stdio.h>
-int main()
-{
-     int i,n,m,j,c=0;
-    scanf("%d%d",&n,&m);
-    for(i=n;i<=m;i++)
-    {
-        c=0;
-        for(j=1;j<=i;j++)
-        {
-            if(i%j==0)
-            {
-                c++;
-            }
-        }
-        if(c==2)
-        {
-            printf("%d
+#include <stdio.h>
+int main(){
+   int number1,number2,i,j,flag;
+  
+   scanf("%d %d",&number1,&number2);
+   
+   for(i=number1+1;i<number2;i++){
+       
+      flag=0;
+      for(j=2;j<=i/2;++j){
+         
+         if(i%j==0){
+            flag=1;
+            break;
+         }
+      }
+      if(flag==0)
+         printf("%d
 ",i);
-        }
-    }
+   }
+   return 0;
 }
