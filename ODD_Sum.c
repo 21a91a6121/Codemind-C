@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int arr[100],i,n,sum = 0;
+    int n,ar[20],sum=0;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&ar[i]);
     }
-    for(i=0;i<n;i++)
+    for(int i=0;i<n;i++)
     {
-        if(arr[i]%2!=0)
+        if(ar[i]%2!=0)
         {
-            sum = sum + arr[i];
+            sum=sum+ar[i];
         }
     }
     printf("%d",sum);
