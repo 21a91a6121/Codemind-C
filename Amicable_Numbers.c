@@ -1,22 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,i,fds=0,sds=0;
-    scanf("%d%d",&n,&m);
-    for(i=1;i<n;i++)
+    long long int a,b,sum=0,i;
+    scanf("%lld%lld",&a,&b);
+    for(i=1;i<a;i++)
     {
-        if(n%i==0)
-        fds=fds+i;
+        if(a%i==0)
+        sum=sum+i;
     }
-    for(i=1;i<m;i++)
-    {
-        if(m%i==0)
-        sds=sds+i;
-    }
-    if((n==sds) && (m==fds))
+    if(sum==b)
     printf("Amicable");
     else
-    {
-        printf("Not Amicable");
-    }
+    printf("Not Amicable");
+    return 0;
 }
