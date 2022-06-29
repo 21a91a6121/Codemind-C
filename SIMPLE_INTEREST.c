@@ -1,10 +1,12 @@
 #include<stdio.h>
-int main()
+#include<math.h>
+ main()
 {
-    int P,R,T,SI;
-    scanf("%d%d%d%d",&P,&T,&R);
-    SI= (P*T*R)/100;
-    printf("%d",SI);
-    return 0;
+    int p,r,t,si;
+    scanf("%d%d%d",&p,&r,&t);
+    si=(p*r*t)/100;
+    printf("%d",si);
+    
+
     
 }
