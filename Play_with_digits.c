@@ -1,25 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,a[100],i,c=0,x,d;
+    int n;
     scanf("%d",&n);
+    int a[100],i,sum=0,count=0,temp,r;
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
-        if(a[i]==0)
+    }
+    for(i=0;i<n;i++)
+    {
+        temp=a[i];
+        while(temp>0)
         {
-          c++;
-        }
-        else
-        {
-            x=a[i];
-            while(x)
-            {
-                d=x%10;
-                c+=d;
-                x/=10;
-            }   
+            r=temp%10;
+            sum=sum+r;
+            temp=temp/10;
         }
     }
-    printf("%d",c);
+    printf("%d",sum);
 }
