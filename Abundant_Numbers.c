@@ -1,14 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int num,fac,i=0;
-    scanf("%d",&num);
-    for(fac=1;fac<num;fac++)
+    int n,s=0,i;
+    scanf("%d",&n);
+    for(i=1;i<=n/2;i++)
     {
-        if(num%fac==0)
-        i=i+fac;
+        if(n%i==0)
+        {
+            s+=i;
+        }
     }
-    if(i>num)
+    if(s>n)
     {
         printf("True");
     }
@@ -16,5 +18,4 @@ int main()
     {
         printf("False");
     }
-    return 0;
 }
