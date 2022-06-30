@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int arr[100],n,i,even,ind;
+    int n,arr[100],i,k=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -11,9 +11,8 @@ int main()
     {
         if(arr[i]%2==0)
         {
-            even = arr[i];
-            ind = i;
+            k=i;
         }
     }
-    printf("%d",ind);
+    printf("%d",k);
 }
