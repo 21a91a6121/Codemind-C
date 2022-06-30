@@ -1,20 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,s=9999;
+    int n;
     scanf("%d",&n);
-    int a[n];
-    for(i=0;i<n;i++)
+    int a[n],i,min;
+    for(i=0; i<n; i++)
     {
-    scanf("%d",&a[i]);
+        scanf("%d",&a[i]);
     }
-    for(i=0;i<n;i++)
+    min=a[0];
+    for(i=0; i<n; i++)
     {
-       if(a[i]<s)
-       {
-           s=a[i];
-       }
+        if(min>a[i])
+        {
+            min=a[i];
+            a[i]=a[0];
+        }
     }
-    printf("%d",s);
-    
+    printf("%d",min);
 }
