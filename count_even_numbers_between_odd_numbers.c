@@ -1,18 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int r=0,v[2004],k,n;
+    int n,a[100],i,c=0;
     scanf("%d",&n);
-    for(k=0;k<n;k++)
+    for(i=0;i<n;i++)
     {
-        scanf("%d",&v[k]);
+        scanf("%d",&a[i]);
     }
-    for(k=0;k<n-2;k++)
+    for(i=0;i<n-2;i++)
     {
-        if(v[k]%2!=0 && v[k+1]%2==0 && v[k+2]%2!=0)
+        if(a[i+2]%2!=0 && a[i]%2!=0)
         {
-            r++;
+            if(a[i+1]%2==0)
+            {
+                c++;
+            }
         }
     }
-    printf("%d",r);
+    printf("%d",c);
 }
