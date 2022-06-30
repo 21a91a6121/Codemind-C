@@ -1,24 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int arr[100],n,i,c=0;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
+    int v[2004],r,k,l=0;
+    scanf("%d",&r);
+    for(k=0;k<r;k++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&v[k]);
     }
-    for(i=0;i<n;i++)
+    for(k=0;k<r;k++)
     {
-        if(arr[i]%2==0)
+        if(v[k]%2==0)
         {
-           c++; 
-        }
-        if(arr[i]==0)
-        {
-            c=c+1;
+            l++;
         }
     }
-    if(c==n)
+    if(l==r)
     {
         printf("True");
     }
